@@ -12,7 +12,7 @@ steps:
 - task: UiPathPack@2
   inputs:
     versionType: 'AutoVersion'
-    projectJsonPath: '$(Build.ArtifactStagingDirectory)'
+    projectJsonPath: '$(System.DefaultWorkingDirectory)'
     outputType: 'Process'
     outputPath: '$(Build.ArtifactStagingDirectory)/Output'
     
