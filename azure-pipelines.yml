@@ -17,5 +17,7 @@ steps:
     outputPath: '$(Build.ArtifactStagingDirectory)/Output'
 - task: PublishBuildArtifacts@1
   inputs:
-    pathToPublish: 'Releases'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'POCProcess'
+    publishLocation: 'Container'
 
