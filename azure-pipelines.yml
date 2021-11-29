@@ -14,5 +14,5 @@ steps:
     versionType: 'AutoVersion'
     projectJsonPath: '$(Build.SourcesDirectory)'
     outputType: 'Process'
-    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+    outputPath: '../Releases'
 
