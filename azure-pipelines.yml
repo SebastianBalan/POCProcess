@@ -12,16 +12,7 @@ steps:
 - task: UiPathPack@2
   inputs:
     versionType: 'AutoVersion'
-    projectJsonPath: '$(Build.SourcesDirectory)'
+    projectJsonPath: '$(System.DefaultWorkingDirectory)/_SebastianBalan_POCProcess'
     outputType: 'Process'
-    orchestratorConnection: '$(PipelineProject)'
-    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
-- task: UiPathDeploy@2
-  inputs:
-    orchestratorConnection: '$(PipelineProject)'
-    packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
-    folderName: '$(FolderNamePipeline)'
-    entryPoints: 'Main.xaml'
-    traceLevel: 'Information'
-
+    outputPath: '$(System.DefaultWorkingDirectory)/_SebastianBalan_POCProcess'
     
