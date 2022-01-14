@@ -3186,9 +3186,9 @@
     "restore": {
       "projectUniqueName": "POCProcess",
       "projectName": "POCProcess",
-      "projectPath": "C:\\Users\\sebastian.balan\\OneDrive - UiPath\\Documents\\UiPath\\POCProcess\\.local",
+      "projectPath": "C:\\sebi\\UiPath\\POCProcess\\.local",
       "packagesPath": "C:\\UiPathPackages",
-      "outputPath": "C:\\Users\\sebastian.balan\\OneDrive - UiPath\\Documents\\UiPath\\POCProcess\\.local"
+      "outputPath": "C:\\sebi\\UiPath\\POCProcess\\.local"
     },
     "frameworks": {
       "net461": {

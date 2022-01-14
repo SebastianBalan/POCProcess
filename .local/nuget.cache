@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "smJXS7LDd/bzgmXElNgCdu+PbvmJwttk2PARA4gBHSGnosGoDl++Tm+zVkc0lGFTmIVEnOlfRpqBg1oS/9VL9g==",
+  "dgSpecHash": "QFiAh9tyNj3kQ53G933qqh47hBf9TbX5D6maqD7VLLepPggSdHSy0EFDHqPYLHXrppmSJM8vVxg36bPoyXwfrw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sebastian.balan\\OneDrive - UiPath\\Documents\\UiPath\\POCProcess\\.local\\",
+  "projectFilePath": "C:\\sebi\\UiPath\\POCProcess\\.local\\",
   "expectedPackageFiles": [
     "C:\\UiPathPackages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
     "C:\\UiPathPackages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
