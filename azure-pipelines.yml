@@ -20,5 +20,5 @@ steps:
   inputs:
     orchestratorConnection: 'cloudOrch'
     packagesPath: '$(Build.ArtifactStagingDirectory)/Output'
-    folderName: 'Seba''s folder'
+    folderName: 'Seba folder'
     entryPoints: 'Main.xaml'
