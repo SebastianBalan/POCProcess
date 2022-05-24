@@ -16,9 +16,9 @@ steps:
     outputType: 'Process'
     orchestratorConnection: 'cloudOrch'
     outputPath: '$(Build.ArtifactStagingDirectory)/Output'
-- task: PublishBuildArtifacts@1
+- task: UiPathDeploy@2
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'POCProcess'
-    publishLocation: 'Container'
-
+    orchestratorConnection: 'cloudOrch'
+    packagesPath: '$(Build.ArtifactStagingDirectory)/Output'
+    folderName: 'Seba''s folder'
+    entryPoints: 'Main.xaml'
