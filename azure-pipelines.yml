@@ -14,11 +14,9 @@ steps:
     versionType: 'AutoVersion'
     projectJsonPath: '$(Build.SourcesDirectory)'
     outputType: 'Process'
-    orchestratorConnection: 'cloudOrch'
     outputPath: '$(Build.ArtifactStagingDirectory)/Output'
-- task: UiPathDeploy@2
+- task: PublishBuildArtifacts@1
   inputs:
-    orchestratorConnection: 'cloudOrch'
-    packagesPath: '$(Build.ArtifactStagingDirectory)/Output'
-    folderName: 'Seba folder'
-    entryPoints: 'Main.xaml'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'POCProcess'
+    publishLocation: 'Container'
