@@ -14,7 +14,7 @@ steps:
     targetType: 'inline'
     script: |
       $date=$(Get-Date -Format hhmmss);
-      Write-Host "##vso[task.setvariable variable=version;]$date"
+      Write-Host "##vso[task.setvariable variable=version]$date"
       Write-Host "$date"
 - task: UiPathPack@2
   inputs:
@@ -22,7 +22,7 @@ steps:
     version: '$(version)'
     projectJsonPath: '$(Build.SourcesDirectory)'
     outputType: 'Process'
-    outputPath: '$(Build.ArtifactStagingDirectory)/Output'
+    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
