@@ -13,7 +13,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      $date=$(Get-Date -Format HMMSS);
+      $date=$(Get-Date -Format hmmss);
       Write-Host "##vso[task.setvariable variable=version]$date"
       Write-Host "$date"
 - task: UiPathPack@2
