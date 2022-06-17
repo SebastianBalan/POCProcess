@@ -11,7 +11,8 @@ pool:
 steps:
 - task: UiPathPack@2
   inputs:
-    versionType: 'AutoVersion'
+    versionType: 'ManualVersion'
+    version: '$(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)'
     projectJsonPath: '$(Build.SourcesDirectory)'
     outputType: 'Process'
     outputPath: '$(Build.ArtifactStagingDirectory)/Output'
