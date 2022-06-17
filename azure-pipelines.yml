@@ -9,10 +9,16 @@ pool:
   vmImage: windows-latest
 
 steps:
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      $date=$(Get-Date -Format %H%M%S);
+      Write-Host "##vso[task.setvariable variable=version]$date"
 - task: UiPathPack@2
   inputs:
     versionType: 'ManualVersion'
-    version: '$(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)'
+    version: '$(version)'
     projectJsonPath: '$(Build.SourcesDirectory)'
     outputType: 'Process'
     outputPath: '$(Build.ArtifactStagingDirectory)/Output'
