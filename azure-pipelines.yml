@@ -19,7 +19,7 @@ steps:
 - task: UiPathPack@2
   inputs:
     versionType: 'ManualVersion'
-    version: '$(version)'
+    version: '1.0.3'
     projectJsonPath: '$(Build.SourcesDirectory)'
     outputType: 'Process'
     outputPath: '$(Build.ArtifactStagingDirectory)/Output'
