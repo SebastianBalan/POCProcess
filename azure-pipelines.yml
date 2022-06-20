@@ -13,14 +13,14 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      export date="$(date '+%H%M%S')"
+      export date="$(date '+%H.%M.%S')"
       echo "##vso[task.setvariable variable=version;isOutput=true]$date"
       echo "$date"
   name: "GetVersion"
 - task: UiPathPack@2
   inputs:
     versionType: 'ManualVersion'
-    version: '$(GetVersion.version)'
+    version: '$(GetVersion.version).0'
     projectJsonPath: '$(Build.SourcesDirectory)'
     outputType: 'Process'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
